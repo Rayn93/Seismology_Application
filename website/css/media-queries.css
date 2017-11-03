@@ -1,0 +1,129 @@
+@media all and (max-width: 1199px) {
+
+    #myCarousel .item {
+        height: 500px;
+    }
+
+    header .nav-category ul li a{
+        font-size: 16px;
+    }
+
+    header .carousel-caption h3 {
+        font-size: 65px;
+    }
+
+    header .carousel-caption p {
+        font-size: 25px;
+    }
+
+
+    footer .nav-footer .fa-question-circle-o {
+        font-size: 100px;
+        margin-top: 75px;
+    }
+
+    #fb-widget {
+        top: 130px;
+    }
+
+
+}
+
+
+@media all and (max-width: 991px) {
+
+    header .carousel-indicators {
+        width: 100%;
+        left: 0;
+        right: 5%;
+        margin-left: 0;
+    }
+
+    header .nav-category ul li:nth-child(4),
+    header .nav-category ul li:nth-child(5),
+    header .nav-category ul li:nth-child(6){
+        display: none;
+    }
+
+    header .nav-category ul li {
+        width: 19%;
+    }
+
+    header .nav-category {
+        height: 72px;
+    }
+
+    header .carousel-caption h3 {
+        font-size: 55px;
+    }
+
+    header .carousel-caption p {
+        font-size: 20px;
+    }
+
+    footer .myself p {
+        line-height: 27px;
+        font-size: 20px;
+    }
+
+    #fb-widget {
+        top: 100px;
+    }
+
+
+
+
+}
+
+@media all and (max-width: 767px) {
+
+    footer .myself p{
+        margin: 10px auto;
+    }
+
+    header .traggle-menu nav ul li {
+        height: 30px;
+        line-height: 35px;
+    }
+
+
+}
+
+@media all and (max-width: 650px) {
+
+    header .carousel-caption h3 {
+        font-size: 40px;
+    }
+
+    header .carousel-caption p {
+        font-size: 18px;
+    }
+
+
+    footer .myself p{
+        width: 100%;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+}
+
+@media all and (max-width: 580px) {
+
+    header .nav-category ul li:nth-child(3),
+    header .nav-category ul li:nth-child(7){
+        display: none;
+    }
+
+    header .nav-category ul li {
+        width: 32%;
+    }
+
+
+}
+
+@media all and (max-width: 460px) {
+
+    
+}
+
