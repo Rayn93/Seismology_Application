@@ -549,7 +549,7 @@ MAIN SECTION HOME PAGE
 }
 
 #homepage main .bgHeader{
-    height: 200px;
+    height: 250px;
     width: 100%;
     background-attachment: fixed;
     background-size: cover;
@@ -559,6 +559,47 @@ MAIN SECTION HOME PAGE
 #homepage main .bg1{
     background-image: url("../img/slajdy/slide0.jpg");
 }
+
+#aboutProject{
+    padding: 50px 0;
+}
+
+#aboutProject h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#aboutProject p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.bgHeader .mainHeader{
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 3px 0px 0px rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+
+.bgHeader .lead{
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 3px 0px 0px rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -619,6 +660,8 @@ footer .copyright{
     line-height: 30px;
     font-size: 18px;
 }
+
+
 
 
 
