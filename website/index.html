@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" href="css/style_main.css">
     <link rel="stylesheet" type="text/css" href="css/media-queries.css">
 
+
+
+
 </head>
 
 <body id="homepage">
@@ -175,13 +178,13 @@
         <div class="row">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Carousel indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                    <li data-target="#myCarousel" data-slide-to="4"></li>
-                </ol>
+                <!--<ol class="carousel-indicators">-->
+                    <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+                    <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+                    <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+                    <!--<li data-target="#myCarousel" data-slide-to="3"></li>-->
+                    <!--<li data-target="#myCarousel" data-slide-to="4"></li>-->
+                <!--</ol>-->
                 <!-- Wrapper for carousel items -->
                 <div class="carousel-inner ">
                     <div class="item active">
@@ -233,24 +236,100 @@
     <section id="indexMap">
 
         <div class="container-fluid nopadding">
-            <div class="bgHeader bg1">
-                <div class="overlay"></div>
-                <div class="row nomargin">
-                    <h3 class="mainHeader">Ostatnio zarejestrowane wstrząsy</h3>
-                    <p class="lead">Zobacz mapę z najnowszymi wstrząsami, któr zostały zarejestrowane przez USS UŚ</p>
+                <div class="row nomargin nopadding">
+
+                <div class="col-md-7 nopadding">
+                    <div id="map"></div>
                 </div>
+                <div class="col-md-5 small-md-5">
+                    <h3 class="mainHeader">Ostatnio zarejestrowane wstrząsy lokalne</h3>
+                    <p class="lead">Zobacz mapę z najnowszymi wstrząsami, któr zostały zarejestrowane przez USS UŚ. Prowadzimy rejestr wstrząsów z terenu Górnego Śląska od 2017 roku. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assum.  </p>
+                    <a class="button" href="#aboutProject"><span>ZOBACZ PEŁEN KATALOG</span></a>
+                </div>
+
+                </div>
+
             </div>
-
-            <div class="map">
-
-            </div>
-
         </div>
 
-
-
-
     </section>
+
+
+    <section id="globalEvents">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="mainHeader">Zarejestrowane trzęsienia Ziemii</h3>
+                    <p class="lead">Uczelniana Sieć Sejsmologiczna UŚ prowadzi również rejestr dużych trzęsień Ziemii mających miejsce w każdym zakądku świata. Zobacz najnowsze globalne zjawiska zarejestrowane przez naszą sieć.</p>
+
+                    <div id="map2"></div>
+
+                    <a class="button" href="#aboutProject"><span>ZOBACZ PEŁEN KATALOG</span></a>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="separator">
+        <div class="mask"></div>
+    </div>
+
+    <section id="news">
+        <div class="container">
+            <div class="row">
+
+                <h3 class="mainHeader">Aktualności</h3>
+                <p class="lead">Najnowsze informacje z życia USS UŚ</p>
+
+                <div class="col-md-4 article">
+                    <img class="img-responsive" src="img\39_big.jpg">
+                    <h4>Temat artykułu 1</h4>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui </p>
+                    <a class="button" href="#aboutProject"><span>Czytaj więcej</span></a>
+                </div>
+
+                <div class="col-md-4 article">
+                    <img class="img-responsive" src="img\39_big.jpg">
+                    <h4>Temat artykułu 1</h4>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui </p>
+                    <a class="button" href="#aboutProject"><span>Czytaj więcej</span></a>
+                </div>
+
+                <div class="col-md-4 article">
+                    <img class="img-responsive" src="img\39_big.jpg">
+                    <h4>Temat artykułu 1</h4>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui </p>
+                    <a class="button" href="#aboutProject"><span>Czytaj więcej</span></a>
+                </div>
+
+
+            </div>
+
+            <a class="button mt20" href="#aboutProject"><span>ZOBACZ WIĘCEJ</span></a>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!--<div class="bgHeader bg1">-->
+        <!--<div class="overlay"></div>-->
+        <!--<div class="row nomargin">-->
+            <!--<h3 class="mainHeader">Ostatnio zarejestrowane wstrząsy</h3>-->
+            <!--<p class="lead">Zobacz mapę z najnowszymi wstrząsami, któr zostały zarejestrowane przez USS UŚ</p>-->
+        <!--</div>-->
+    <!--</div>-->
 
 
 
@@ -305,6 +384,10 @@
 <script src="js/bootstrap.min.js"></script>
 <!--<script src="js/jquery.dotdotdot.min.js"></script>-->
 <script src="js/script_main.js"></script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMHwKNheS25UoaGmMXTF7STvMisqUpef4&callback=initMap">
+</script>
 
 </body>
 
