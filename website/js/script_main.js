@@ -98,83 +98,65 @@ $(document).ready(function () {
 //Google maps
 
 function initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
+
+    var locations = [
+        ['Bytom', '12 listopad 2017 00:55', 3.1, 50.366495, 18.874169, 4],
+        ['Orzesze', '6 listopad 2017 12:55', 2.1, 50.143555, 18.795350, 5],
+        ['Katowice', '2 listopad 2017 07:55', 2.6, 50.243555, 18.995350, 3],
+        ['Pszczyna', '30 listopad 2017 18:55', 2.8, 49.970026, 19.092426, 2],
+        ['Lędziny', '5 grudzień 2017 03:55', 2.0, 50.130933, 19.142082, 1]
+    ];
+
+    var silesiaCenter = {lat: 50.243555, lng: 18.995350};
     var worldCenter = {lat: 0.191, lng: 22.830};
+
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: uluru
+        zoom: 9,
+        center: silesiaCenter,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
     var map2 = new google.maps.Map(document.getElementById('map2'), {
         zoom: 2,
-        center: worldCenter
+        center: worldCenter,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-        '<div id="bodyContent">'+
-        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-        'Heritage Site.</p>'+
-        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-        'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-        '(last visited June 22, 2009).</p>'+
-        '</div>'+
-        '</div>';
+    var infowindow = new google.maps.InfoWindow();
 
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
+    var marker, i;
+    var markers = [];
 
-    var marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-        title: 'Uluru (Ayers Rock)'
-    });
-    marker.addListener('click', function() {
-        infowindow.open(map, marker);
-    });
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][3], locations[i][4]),
+            map: map
+        });
+
+        markers.push(marker);
+
+        console.log(markers);
+
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+                infowindow.setContent(
+                    '<div class="markerDescription">'+
+                        '<strong>Miasto: </strong>'+locations[i][0] + '<br />'+
+                        '<strong>Czas: </strong>'+locations[i][1] + '<br />'+
+                        '<strong>Energia: </strong>'+locations[i][2] + '<br />'+
+                        '<a class="text-right" href="#">Więcej</a>'+
+                    '</div>'
+
+                );
+
+
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+
+    console.log(markers[0]);
+
+
 }
-
-
-
-// var map;
-// function initMap() {
-//     map = new google.maps.Map(document.getElementById('map'), {
-//         zoom: 2,
-//         center: {lat: -33.865427, lng: 151.196123},
-//         mapTypeId: 'terrain'
-//     });
-//
-//     // Create a <script> tag and set the USGS URL as the source.
-//     var script = document.createElement('script');
-//
-//     // This example uses a local copy of the GeoJSON stored at
-//     // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-//     script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-//     document.getElementsByTagName('head')[0].appendChild(script);
-//
-//     map.data.setStyle(function(feature) {
-//         var magnitude = feature.getProperty('mag');
-//         return {
-//             icon: getCircle(magnitude)
-//         };
-//     });
-// }
-//
-// function getCircle(magnitude) {
-//     return {
-//         path: google.maps.SymbolPath.CIRCLE,
-//         fillColor: 'red',
-//         fillOpacity: .2,
-//         scale: Math.pow(2, magnitude) / 2,
-//         strokeColor: 'white',
-//         strokeWeight: .5
-//     };
-// }
-//
-// function eqfeed_callback(results) {
-//     map.data.addGeoJson(results);
-// }
 

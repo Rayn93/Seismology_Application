@@ -216,6 +216,22 @@ input.button:hover{
     margin: 20px 0 40px 0;
 }
 
+.markerDescription{
+    font-size: 18px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.markerDescription a{
+    display: block;
+    float: right;
+    font-weight: bold;
+}
+
+.markerDescription a:hover{
+    color: #2b542c;
+}
+
 
 /*::::::::::::::
 HOME PAGE
