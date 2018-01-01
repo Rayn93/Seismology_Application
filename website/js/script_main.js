@@ -51,7 +51,11 @@ $(document).ready(function () {
     });
 
 
-
+//Fency box
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
 
 ////PODMIANA KLASY PRZY SZEROKOŚCI OKNA 620PX DLA SEKCJI KATEGORIE
 //
@@ -107,7 +111,7 @@ $(function(){
 
 
 
-//Google maps
+//Google maps  fo home page
 
 function initMap() {
 
@@ -143,6 +147,7 @@ function initMap() {
         center: worldCenter,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
+
 
     var infowindow = new google.maps.InfoWindow();
 
@@ -207,5 +212,6 @@ function initMap() {
             }
         })(marker, i));
     }
+
 }
 

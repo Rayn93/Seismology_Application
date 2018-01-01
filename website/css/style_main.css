@@ -267,6 +267,10 @@ header #header-top.sticky{
     height:50px;
 }
 
+#single-event header #header-top{
+    background: #141212;
+}
+
 
 header .burger{
     margin-left:50px;
@@ -739,12 +743,40 @@ table.footable thead th{
 }
 
 
+/*::::::::::::::::::SINGLE EVENT::::::::::::::::::::::::*/
 
 
+#single-event header .static-top #single-map{
+    width: 100%;
+    height: 100%;
+}
+
+#single-event #event-table .row{
+    margin-top: -100px;
+    background: #fff;
+    position: relative;
+    border-radius: 34px;
+    padding: 30px 50px 100px 50px;
+}
+
+#single-event #event-table h2{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
+#single-event #event-table table tr{
+    font-size: 22px;
+    padding: 5px 15px;
+}
+
+#single-event #event-table table tr td:first-child{
+    font-weight: bold;
+}
 
 
-
-    /*::::::::::::::::::FOOTER::::::::::::::::::::::::*/
+/*::::::::::::::::::FOOTER::::::::::::::::::::::::*/
 
 footer{
     background: #141212;
