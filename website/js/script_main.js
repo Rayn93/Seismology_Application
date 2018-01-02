@@ -51,11 +51,6 @@ $(document).ready(function () {
     });
 
 
-//Fency box
-    $(".fancybox").fancybox({
-        openEffect: "none",
-        closeEffect: "none"
-    });
 
 ////PODMIANA KLASY PRZY SZEROKOŚCI OKNA 620PX DLA SEKCJI KATEGORIE
 //
@@ -70,21 +65,10 @@ $(document).ready(function () {
 //        //	configuration goes here
 //    });
 
-
-
-
-
 });
 
 
-//Catalog data
 
-$(function(){
-    $('.global-table').footable({
-        "columns": $.get('http://localhost/seismo/website/data/columns.json'),
-        "rows": $.get('http://localhost/seismo/website/data/rows.json')
-    });
-});
 
 
 ////PODMIANA KLASY PRZY SZEROKOŚCI OKNA 620PX DLA SEKCJI KATEGORIE

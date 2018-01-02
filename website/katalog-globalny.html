@@ -195,7 +195,14 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <table class="global-table table table-striped " data-paging="true" data-sorting="true" data-filtering="true"></table>
+                    <table class="global-table table table-striped "
+                           data-paging="true"
+                           data-sorting="true"
+                           data-filtering="true"
+                           data-paging-count-format="{CP} z {TP}"
+                           data-paging-size="20"
+                           data-filter-placeholder="Szukaj">
+                    </table>
 
                 </div>
             </div>
@@ -251,6 +258,15 @@
 <script src="js/footable.min.js"></script>
 <script src="js/script_main.js"></script>
 
+<script>
+    //Catalog data
+    $(function(){
+        $('.global-table').footable({
+            "columns": $.get('http://localhost/seismo/website/data/columns.json'),
+            "rows": $.get('http://localhost/seismo/website/data/rows.json')
+        });
+    });
+</script>
 
 
 </body>

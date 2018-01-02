@@ -742,6 +742,10 @@ table.footable thead th{
     font-size: 20px;
 }
 
+table.footable td{
+    font-size: 20px;
+}
+
 
 /*::::::::::::::::::SINGLE EVENT::::::::::::::::::::::::*/
 
