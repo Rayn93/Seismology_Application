@@ -97,6 +97,104 @@ $(document).ready(function () {
 
 //Google maps  fo home page
 
+
+var mapStyle = [
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": -30
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#353535"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#656565"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#505050"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#808080"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#454545"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "hue": "#000000"
+            },
+            {
+                "saturation": 100
+            },
+            {
+                "lightness": -40
+            },
+            {
+                "invert_lightness": true
+            },
+            {
+                "gamma": 1.5
+            }
+        ]
+    }
+]
+
+var markEvent = {
+   url: "grafika/event_map_mark.png", // url
+};
+
 function initMap() {
 
     var locations = [
@@ -123,13 +221,16 @@ function initMap() {
     var localMap = new google.maps.Map(document.getElementById('map'), {
         zoom: 9,
         center: silesiaCenter,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: mapStyle,
+
     });
 
     var worldMap = new google.maps.Map(document.getElementById('map2'), {
         zoom: 2,
         center: worldCenter,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: mapStyle,
     });
 
 
@@ -142,7 +243,8 @@ function initMap() {
     for (i = 0; i < locations.length; i++) {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i][3], locations[i][4]),
-            map: localMap
+            map: localMap,
+            icon: markEvent
         });
 
         markers.push(marker);
@@ -172,7 +274,8 @@ function initMap() {
     for (i = 0; i < locationsWorld.length; i++) {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locationsWorld[i][3], locationsWorld[i][4]),
-            map: worldMap
+            map: worldMap,
+            icon: markEvent
         });
 
         markers.push(marker);
