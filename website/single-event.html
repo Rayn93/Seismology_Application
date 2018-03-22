@@ -306,6 +306,7 @@
 //        };
 
         var event = {lat: 50.366495, lng: 18.874169};
+        var station = {lat: 50.311495, lng: 18.844269};
         var singleMap = new google.maps.Map(document.getElementById('single-map'), {
             zoom: 12,
             center: event
@@ -315,6 +316,13 @@
             map: singleMap,
             icon: "grafika/event_map_mark.png"
         });
+
+        var marker2 = new google.maps.Marker({
+            position: station,
+            map: singleMap,
+            icon: "grafika/station_map_mark.png"
+        });
+
     }
 
     $(document).ready(function () {

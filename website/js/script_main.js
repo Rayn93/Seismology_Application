@@ -190,9 +190,14 @@ var mapStyle = [
         ]
     }
 ]
+var silesiaCenter = {lat: 50.243555, lng: 18.995350};
+var worldCenter = {lat: 0.191, lng: 22.830};
 
 var markEvent = {
-   url: "grafika/event_map_mark.png", // url
+    url: "grafika/event_map_mark.png", // url
+};
+var markStation = {
+    url: "grafika/station_map_mark.png", // url
 };
 
 function initMap() {
@@ -215,14 +220,20 @@ function initMap() {
         ['Grecja', '5 grudzień 2017 03:55', 4.7, 38.324176, 22.010317, 1]
     ];
 
-    var silesiaCenter = {lat: 50.243555, lng: 18.995350};
-    var worldCenter = {lat: 0.191, lng: 22.830};
+
+    var locationStations = [
+        ['Sosnowie [SOS] ',  -43.860600, 171.294639, 1 ],
+        ['Mysłowice [MYS]',  35.319650, 137.252233, 2],
+        ['Łaziska Górne [LAG]', -2.739081, 102.196058, 3],
+        ['Chorzów [CHR]',  -29.993567, -71.010555, 4]
+    ];
+
 
     var localMap = new google.maps.Map(document.getElementById('map'), {
         zoom: 9,
         center: silesiaCenter,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: mapStyle,
+        styles: mapStyle
 
     });
 
@@ -230,7 +241,14 @@ function initMap() {
         zoom: 2,
         center: worldCenter,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: mapStyle,
+        styles: mapStyle
+    });
+
+    var stationdMap = new google.maps.Map(document.getElementById('stationMap'), {
+        zoom: 9,
+        center: silesiaCenter,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: mapStyle
     });
 
 

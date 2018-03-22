@@ -780,6 +780,39 @@ table.footable td{
 }
 
 
+/*::::::::::::::::::ABOUT PROJECT::::::::::::::::::::::::*/
+
+
+#about #intro{
+    padding: 30px 0 50px 0;
+}
+
+#about #intro i {
+    font-size: 82px;
+    height: 150px;
+    width: 150px;
+    padding-top: 26px;
+    border: 5px solid;
+    border-radius: 23px;
+    margin-top: 40px;
+}
+
+#about #intro h4{
+    font-size: 35px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+#about #intro p{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+#about #networkMap #stationMap{
+    height: 500px;
+}
+
+
 /*::::::::::::::::::FOOTER::::::::::::::::::::::::*/
 
 footer{

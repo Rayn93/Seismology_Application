@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8"/>
-    <title>Uniewersytecka Sieć Sejsmologiczna Uniwersytetu Śląskiego</title>
+    <title>O Projekcie | USS UŚo</title>
     <meta name="description"
           content="Strona sieci sejsmologicznej UŚ ma za zadanie dostarczenie informacji o wstrząsach sejsmicznych zarejestrowanych przez USS UŚ na Grónym Śląsku"/>
     <meta name="keywords" content="O Projekcie | USS UŚ"/>
@@ -193,7 +193,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Cele powstania <br /> Uniwersyteckiej Sieci Sejsmologicznej Uniwersytetu Śląskiego</h2>
+                    <h3 class="mainHeader">Cele powstania <br /> Uniwersyteckiej Sieci Sejsmologicznej Uniwersytetu Śląskiego</h3>
+                    <h2></h2>
                 </div>
 
 
@@ -206,42 +207,29 @@
                 <div class="col-md-4">
                     <i class="fa fa-database" aria-hidden="true"></i>
                     <h4>Zbieranie danych</h4>
-                    <p>USS UŚ to również tworzenie bazy wstrząsów mających miejsce na Górnym Śląsku</p>
+                    <p>USS UŚ to również tworzenie bazy wstrząsów mających miejsce na Górnym Śląsku.</p>
                 </div>
 
                 <div class="col-md-4">
                     <i class="fa fa-pie-chart" aria-hidden="true"></i>
                     <h4>Analizy i przetwarzanie</h4>
-                    <p>Dodatkowo staramy się rozwijać nasz autorski system do automatycznego przetwarzania danych z sieci co ułatwia i przyśpiesza analizję sejsmologiczną.</p>
+                    <p>Dodatkowo staramy się rozwijać nasz autorski system do automatycznego przetwarzania danych z sieci co ułatwia i przyśpiesza analizję danych sejsmologicznych.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="indexMap">
-
+    <section id="networkMap">
         <div class="container-fluid nopadding">
-                <div class="row nomargin nopadding">
-
-                <div class="col-md-7 nopadding">
-                    <div id="map"></div>
-                </div>
-                <div class="col-md-5 small-md-5">
-                    <h3 class="mainHeader">Ostatnio zarejestrowane wstrząsy lokalne</h3>
-                    <p class="lead">Zobacz mapę z najnowszymi wstrząsami, któr zostały zarejestrowane przez USS UŚ. Prowadzimy rejestr wstrząsów z terenu Górnego Śląska od 2017 roku. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assum.  </p>
-                    <a class="button" href="#aboutProject"><span>ZOBACZ PEŁEN KATALOG</span></a>
-                </div>
-
-                </div>
-
+            <div class="row nomargin nopadding">
+                <div id="stationMap"></div>
             </div>
         </div>
-
     </section>
 
 
-    <section id="globalEvents">
+    <section id="stationInfo">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -370,6 +358,64 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJyihe6tbI9ubunBcZGaq1ZnCuSi5gdDg&callback=initMap">
 </script>
+
+
+<script>
+    function initMap() {
+
+        var locationStations = [
+            ['Sosnowie [SOS] ',  50.298968, 19.133768, 1 ],
+            ['Mysłowice [MYS]',  50.209314, 19.118793, 2],
+            ['Łaziska Górne [LAG]', 50.149592, 18.871817, 3],
+            ['Chorzów [CHR]',  50.290576, 18.992003, 4]
+        ];
+
+
+        var stationdMap = new google.maps.Map(document.getElementById('stationMap'), {
+            zoom: 11,
+            center: silesiaCenter,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: mapStyle
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+        var markers = [];
+
+        //Markers Stations Loop
+        for (i = 0; i < locationStations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locationStations[i][1], locationStations[i][2]),
+                map: stationdMap,
+                icon: markStation
+            });
+
+            markers.push(marker);
+
+            console.log(markers);
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(
+                            '<div class="markerDescription">'+
+                            '<strong>Nazwa stacji: <br /> </strong>'+locationStations[i][0] + '<br />'+
+                            '<a class="text-right" href="#">Więcej</a>'+
+                            '</div>'
+
+                    );
+
+
+                    infowindow.open(stationdMap, marker);
+                }
+            })(marker, i));
+        }
+
+    }
+
+</script>
+
+
 
 </body>
 
