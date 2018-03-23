@@ -112,6 +112,16 @@ input.button:hover{
     background: #00a651;
 }
 
+.btn-primary {
+    background: #50a853;
+    border: 1px solid #50a853;
+}
+
+.btn-primary:hover {
+    background: #478d47;
+    border: 1px solid #478d47;
+}
+
 .separator {
     margin: 30px auto;
     width:80%;
@@ -164,6 +174,7 @@ input.button:hover{
 .table-striped>tbody>tr:nth-of-type(odd){
     background-color: #eee;
 }
+
 
 
 /*SOCIAL MEDIA WIDGETS*/
@@ -266,11 +277,6 @@ header #header-top.sticky{
     background: rgba(22, 22, 22, 0.4);
     height:50px;
 }
-
-#single-event header #header-top{
-    background: #141212;
-}
-
 
 header .burger{
     margin-left:50px;
@@ -749,13 +755,19 @@ table.footable td{
 
 /*::::::::::::::::::SINGLE EVENT::::::::::::::::::::::::*/
 
+#single-event header #header-top,
+#single-station header #header-top{
+    background: #141212;
+}
 
-#single-event header .static-top #single-map{
+#single-event header .static-top #single-map,
+#single-station header .static-top #single-map{
     width: 100%;
     height: 100%;
 }
 
-#single-event #event-table .row{
+#single-event #event-table .row,
+#single-station #event-table .row{
     margin-top: -100px;
     background: #fff;
     position: relative;
@@ -763,19 +775,22 @@ table.footable td{
     padding: 30px 50px 100px 50px;
 }
 
-#single-event #event-table h2{
+#single-event #event-table h2,
+#single-station #event-table h2{
     font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
     padding-bottom: 40px;
 }
 
-#single-event #event-table table tr{
+#single-event #event-table table tr,
+#single-station #event-table table tr{
     font-size: 22px;
     padding: 5px 15px;
 }
 
-#single-event #event-table table tr td:first-child{
+#single-event #event-table table tr td:first-child,
+#single-station #event-table table tr td:first-child{
     font-weight: bold;
 }
 
@@ -811,6 +826,77 @@ table.footable td{
 #about #networkMap #stationMap{
     height: 500px;
 }
+
+#about #infoSqueres{
+    margin: 80px 0 100px 0;
+}
+
+#about #infoSqueres button.btn-lg {
+    display: block;
+    width: 100%;
+    height: 128px;
+    margin: 20px auto;
+    white-space: normal;
+    font-size: 30px;
+    line-height: 28px;
+    background: #50a853;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+#about #infoSqueres button.btn-lg:hover,
+#about #infoSqueres .modal-footer button:hover{
+    background: #499249;
+}
+
+#about #infoSqueres .modal-header{
+    border-bottom: 1px solid #ccc;
+}
+
+#about #infoSqueres .modal-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#about #infoSqueres .modal-body {
+    position: relative;
+    padding: 15px;
+    text-align: left;
+    font-size: 20px;
+}
+
+#about #infoSqueres .modal-footer{
+    border-top: 1px solid #ccc;
+}
+
+#about #stationList table{
+    width: 80%;
+    margin: 50px auto 150px auto;
+}
+
+#about #stationList table th,
+#about #stationList table td{
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+#about #stationList table thead tr{
+    background: #50a853;
+    color: #fff;
+}
+
+table .btn-primary{
+    display: block;
+    width: 40px;
+    margin: 0 auto;
+}
+
+
+/*::::::::::::::::::ABOUT PROJECT::::::::::::::::::::::::*/
+
+#single-station
 
 
 /*::::::::::::::::::FOOTER::::::::::::::::::::::::*/
