@@ -190,44 +190,45 @@
         <div class="container">
             <div class="row">
 
-                <h2>Wstrząs sejsmiczny o id: 12</h2>
+                <h2>Stacja sejsmologiczna: Mysłowice</h2>
 
                 <div class="col-md-6">
 
                     <table class="table table-bordered">
                         <tbody>
                             <tr>
-                                <td>Data</td>
+                                <td>Skrót nazwy</td>
+                                <td>MYS</td>
+                            </tr>
+                            <tr>
+                                <td>Data założenia</td>
                                 <td>27 maj 2017</td>
-                            </tr>
-                            <tr>
-                                <td>Czas zdarzenia</td>
-                                <td>12:15</td>
-                            </tr>
-                            <tr>
-                                <td>Maginituda Lokalna</td>
-                                <td>2.9</td>
-                            </tr>
-                            <tr>
-                                <td>Energia</td>
-                                <td>3x10<SUP>6</SUP> </td>
                             </tr>
                             <tr>
                                 <td>Lokalizacja</td>
                                 <td>50.366N  18.874E</td>
                             </tr>
                             <tr>
-                                <td>Głębokość</td>
-                                <td>700 m</td>
+                                <td>Wysokość n.p.m.</td>
+                                <td>298 m n.p.m.</td>
                             </tr>
                             <tr>
-                                <td>Miasto</td>
-                                <td>Bytom</td>
+                                <td>X Sucha Góra</td>
+                                <td>280</td>
                             </tr>
                             <tr>
-                                <td>Kopalnia</td>
-                                <td>Bobrek-Centrum</td>
+                                <td>Y Sucha Góra</td>
+                                <td>-300</td>
                             </tr>
+                            <tr>
+                                <td>Nr sejsmometru</td>
+                                <td>B 981</td>
+                            </tr>
+                            <tr>
+                                <td>Uwagi</td>
+                                <td>Stacja sejsmoczna zlokalizowana w bliskim położeniu autostrady A4 (około 400 m w lini prostej)</td>
+                            </tr>
+
                         </tbody>
                     </table>
 
@@ -235,12 +236,16 @@
 
                 <div class="col-md-6">
 
-                    <a class="thumbnail fancybox" rel="ligthbox" href="img/sejsmo/reading_seismograms1.png">
-                        <img class="img-responsive" alt="" src="img/sejsmo/reading_seismograms1.png" />
+                    <a class="thumbnail fancybox" rel="ligthbox" href="img/sejsmo/sejsmika.png">
+                        <img class="img-responsive" alt="" src="img/sejsmo/sejsmika.png" />
                     </a>
 
-                    <a class="thumbnail fancybox" rel="ligthbox" href="img/sejsmo/waveform_plotting_tutorial_61.png">
-                        <img class="img-responsive" alt="" src="img/sejsmo/waveform_plotting_tutorial_61.png" />
+                    <a class="thumbnail fancybox" rel="ligthbox" href="img/sejsmo/geologia-pod-stacja.jpg">
+                        <img class="img-responsive" alt="" src="img/sejsmo/geologia-pod-stacja.jpg" />
+                    </a>
+
+                    <a class="thumbnail fancybox" rel="ligthbox" href="img/sejsmo/krzywa-hvrs.png">
+                        <img class="img-responsive" alt="" src="img/sejsmo/krzywa-hvrs.png" />
                     </a>
 
                 </div>
@@ -297,27 +302,13 @@
 <script>
     function initMap() {
 
-//        var icon = {
-//            url: "grafika/event_map_mark.gif", // url
-//            scaledSize: new google.maps.Size(20, 20), // scaled size
-//            origin: new google.maps.Point(0,0), // origin
-//            anchor: new google.maps.Point(0, 0) // anchor
-//        };
-
-        var event = {lat: 50.366495, lng: 18.874169};
         var station = {lat: 50.311495, lng: 18.844269};
         var singleMap = new google.maps.Map(document.getElementById('single-map'), {
             zoom: 12,
-            center: event,
+            center: station,
             styles: mapStyle
         });
         var marker = new google.maps.Marker({
-            position: event,
-            map: singleMap,
-            icon: "grafika/event_map_mark.png"
-        });
-
-        var marker2 = new google.maps.Marker({
             position: station,
             map: singleMap,
             icon: "grafika/station_map_mark.png"

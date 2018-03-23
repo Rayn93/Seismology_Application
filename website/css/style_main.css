@@ -753,7 +753,7 @@ table.footable td{
 }
 
 
-/*::::::::::::::::::SINGLE EVENT::::::::::::::::::::::::*/
+/*::::::::::::::::::SINGLE EVENT / SINGLE STATION::::::::::::::::::::::::*/
 
 #single-event header #header-top,
 #single-station header #header-top{
@@ -792,6 +792,10 @@ table.footable td{
 #single-event #event-table table tr td:first-child,
 #single-station #event-table table tr td:first-child{
     font-weight: bold;
+}
+
+#single-station #event-table table tr td:first-child{
+    width: 40%;
 }
 
 
