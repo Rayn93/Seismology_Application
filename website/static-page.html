@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Temat strony</title>
+    <meta name="description"
+          content="Strona sieci sejsmologicznej UŚ ma za zadanie dostarczenie informacji o wstrząsach sejsmicznych zarejestrowanych przez USS UŚ na Grónym Śląsku"/>
+    <meta name="keywords" content="O Projekcie | USS UŚ"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge.chrome=1"/>
+    <meta name="author" content="Robert Saternus">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Pragati+Narrow:700,400&subset=latin,latin-ext' rel='stylesheet'
+          type='text/css'>
+    <!--<link rel="shortcut icon" href="img/favicon.ico" type="image/icon">-->
+
+    <link rel="stylesheet" type="text/css" href="css/html5reset-1.6.1.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style_main.css">
+    <link rel="stylesheet" type="text/css" href="css/media-queries.css">
+
+
+
+</head>
+
+<body id="staticPage">
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.7&appId=603470526483998";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--HEADER -->
+<header>
+    <!--STICKY BAR-->
+    <div id="header-top">
+        <div class="burger"><i class="fa fa-caret-square-o-down" aria-hidden="true"></i>MENU</div>
+        <div class="traggle-menu">
+            <i class="fa fa-times-circle close" aria-hidden="true"></i>
+
+            <div class="logo">
+                <h1><a href="#">LOGO<br/></a></h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>O PROJEKCIE</a></li>
+                    <li><a href="#"><i class="fa fa-database" aria-hidden="true" ></i>KATALOG LOKALNY</a></li>
+                    <li><a href="#"><i class="fa fa-globe" aria-hidden="true" ></i>KATALOG GLOBALNY</a></li>
+                    <li><a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>AKTUALNOŚCI</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ</a></li>
+                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>KONTAKT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="icons-header">
+            <ul>
+                <li><a href="#" data-toggle="modal" data-target="#search-modal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <li><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!--end sticky bar-->
+
+    <!-- Modal with member login -->
+    <div id="login-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">ZALOGUJ SIĘ NA TWOJE KONTO</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-sm-8">
+
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-xs-3 control-label">Email</label>
+                                    <div class="col-xs-9">
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword" class="col-xs-3 control-label">Hasło</label>
+                                    <div class="col-xs-9">
+                                        <input type="password" class="form-control" id="inputPassword" placeholder="Hasło">
+                                        <p class="small"><a href="#">Nie pamiętam hasła</a></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-offset-1 col-xs-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Zapamiętaj mnie
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-offset-1 col-xs-10">
+                                        <button type="submit" class="btn btn-success btn-lg">Zaloguj</button>
+                                    </div>
+                                </div>
+                                <p class="bad-credential">Niepoprawny login lub hasło</p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="separator">
+                        <div class="mask"></div>
+                    </div>
+
+                    <h6>Nie masz jeszcze konta na stronie?</h6>
+                    <a class="button" href="#"><span>ZAŁÓŻ DARMOWE KONTO</span></a>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal with searching form -->
+    <div id="search-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">SZUKAJ NA STRONIE</h3>
+                </div>
+                <div class="modal-body">
+
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="search-input">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                                <input type="text" class="form-control" id="search-input" placeholder="Szukana fraza...">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg">Szukaj</button>
+                    </form>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Top Imagine for static pages-->
+    <div class="container-fluid nopadding">
+        <div class="row nomargin">
+            <div class="static-top">
+                <img class="img-background" src="img/slajdy/slide2.jpg" alt="news">
+
+                <h1>Pytania i odpowiedzi</h1>
+
+            </div>
+        </div>
+    </div>
+    <!--END Object top info-->
+
+</header>
+
+<main>
+
+    <article>
+        <div class="container simpleArticle">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <h3>FAQ</h3>
+
+                    <!--Akordion-->
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Collapsible Group Item #1
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Collapsible Group Item #2
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Collapsible Group Item #3
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END Akordion-->
+
+
+                    <h3>CONTAKT FORM</h3>
+
+                    <div class="row input-container">
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <input type="text" required />
+                                <label>Imię i nazwisko <span>*</span></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input">
+                                <input type="text" required />
+                                <label>Email <span>*</span></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input" style="float:right;">
+                                <input type="text" required/>
+                                <label>Telefon</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <textarea required></textarea>
+                                <label>Wiadomość <span>*</span></label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="btn-lrg submit-btn">Wyślij wiadomość</div>
+                        </div>
+                    </div>
+
+                    <!--Kontakt form-->
+
+
+                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+
+                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+
+                    <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+
+                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+
+                    <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+
+                    <h3>The Final Frontier</h3>
+
+                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+
+                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+
+                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+
+                    <h3>Reaching for the Stars</h3>
+
+                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+
+                    <img src="img/39_big.jpg" alt="">
+
+                    <span class="caption">To go places and do things that have never been done before – that’s what living is all about.</span>
+
+                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+
+                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 myself">
+                <p><strong>Uczelniana Sieć Sejsmologiczna Universytetu Śląskiego</strong> to witryna, która umożliwia gromadzenie oraz analizowanie zjawisk sejsmologicznych pochodzących z działalności górniczej na terenie Górnego Śląska. Jesteś mieszkańcem Śląska? Tutaj możesz sprawdzić, gdzie zatrzęsła się ziemia w Twojej okolicy.
+            </div>
+
+            <div class="col-sm-4 nav-footer">
+                <div class="col-md-4 hidden-xs hidden-sm ico"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+                <div class="col-md-8 col-sm-12 navi">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">JAK TO DZIAŁA</a></li>
+                        <li><a href="#">MAPA STRONY</a></li>
+                        <li><a href="#">KONTAKT</a></li>
+                        <li><a href="#">REGULAMIN</a></li>
+                        <li><a href="#">POLITYKA PRYWATNOŚCI</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">&copy; Wykonanie i prowadzenie strony: <a href="http://robertsaternus.pl/">Robert
+        Saternus</a></div>
+</footer>
+
+
+<!--SOCIAL MEDIA ICONS-->
+<div id="fb-widget">
+    <div class="fb-page" data-href="https://www.facebook.com/geofizyka.geologia.uni.slaski" data-tabs="timeline"
+         data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/geofizyka.geologia.uni.slaski" class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/geofizyka.geologia.uni.slaski">FreeLancelot</a></blockquote>
+    </div>
+    <img class="zakladka" src="img/facebook-icon.png" alt="Rankingowiec facebook funpage"/>
+</div>
+
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script_main.js"></script>
+
+</body>
+
+</html>

@@ -86,6 +86,16 @@
         line-height: 35px;
     }
 
+    .styled-input {
+        width:100%;
+    }
+
+    .submit-btn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }
+
 
 }
 
