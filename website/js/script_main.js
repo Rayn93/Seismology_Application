@@ -59,11 +59,11 @@ $(document).ready(function () {
 //         $("#category .padding").removeClass("col-xs-4").addClass("col-xs-6")
 //     }
 
-////dotdotdot
-//
-//    $(".dot-wrapper h3").dotdotdot({
-//        //	configuration goes here
-//    });
+//dotdotdot
+
+   // $("#postList p.dot").dotdotdot({
+   //     //	configuration goes here
+   // });
 
 });
 
@@ -190,6 +190,8 @@ var mapStyle = [
         ]
     }
 ]
+// var silesiaCenter = new google.maps.LatLng(50.243555, 18.995350);
+// var worldCenter = new google.maps.LatLng(39.305, -76.617);
 var silesiaCenter = {lat: 50.243555, lng: 18.995350};
 var worldCenter = {lat: 0.191, lng: 22.830};
 
@@ -244,12 +246,12 @@ function initMap() {
         styles: mapStyle
     });
 
-    var stationdMap = new google.maps.Map(document.getElementById('stationMap'), {
-        zoom: 9,
-        center: silesiaCenter,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: mapStyle
-    });
+    // var stationdMap = new google.maps.Map(document.getElementById('stationMap'), {
+    //     zoom: 9,
+    //     center: silesiaCenter,
+    //     mapTypeId: google.maps.MapTypeId.ROADMAP,
+    //     styles: mapStyle
+    // });
 
 
     var infowindow = new google.maps.InfoWindow();
