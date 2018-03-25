@@ -52,12 +52,12 @@ $(document).ready(function () {
 
 
 
-////PODMIANA KLASY PRZY SZEROKOŚCI OKNA 620PX DLA SEKCJI KATEGORIE
-//
-//     var width = $(window).width();
-//     if (width < 620) {
-//         $("#category .padding").removeClass("col-xs-4").addClass("col-xs-6")
-//     }
+//PODMIANA KLASY PRZY SZEROKOŚCI OKNA 620PX DLA SEKCJI KATEGORIE
+
+    var width = $(window).width();
+    if (width < 500) {
+        $("#infoSqueres .col-md-3").removeClass("col-xs-6").addClass("col-xs-12");
+    }
 
 //dotdotdot
 
@@ -71,21 +71,21 @@ $(document).ready(function () {
 
 
 
-////PODMIANA KLASY PRZY SZEROKOŚCI OKNA 620PX DLA SEKCJI KATEGORIE
-//$(window).resize(function () {
-//
-//    var width = $(window).width();
-//    if (width < 620) {
-//        $("#category .padding").removeClass("col-xs-4").addClass("col-xs-6")
-//    }
-//
-//    else {
-//        $("#category .padding").removeClass("col-xs-6").addClass("col-xs-4")
-//    }
-//});
-//
-//
-//
+//PODMIANA KLASY PRZY SZEROKOŚCI OKNA 620PX DLA SEKCJI KATEGORIE
+$(window).resize(function () {
+
+   var width = $(window).width();
+   if (width < 500) {
+       $("#infoSqueres .col-md-3").removeClass("col-xs-6").addClass("col-xs-12")
+   }
+
+   else {
+       $("#infoSqueres .col-md-3").removeClass("col-xs-12").addClass("col-xs-6")
+   }
+});
+
+
+
 ////SKRYP ODPOWIADAJĄCY ZA PRAWIDŁOWE WYŚWIETLANIE STRONY NA TEL KOM.
 //
 //var scale = 1 / (window.devicePixelRatio || 1);
@@ -269,8 +269,6 @@ function initMap() {
 
         markers.push(marker);
 
-        console.log(markers);
-
         google.maps.event.addListener(marker, 'click', (function (marker, i) {
             return function () {
                 infowindow.setContent(
@@ -299,8 +297,6 @@ function initMap() {
         });
 
         markers.push(marker);
-
-        console.log(markers);
 
         google.maps.event.addListener(marker, 'click', (function (marker, i) {
             return function () {

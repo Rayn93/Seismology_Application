@@ -16,10 +16,11 @@ body{
 a{
     color:#00a651;
     transition: all 0.4s ease-in-out;
+    font-weight: bold;
 }
 
 a:focus, a:hover{
-    color: #fff;
+    color: #9fa4a9;
     text-decoration: none;
 }
 
@@ -634,7 +635,7 @@ MAIN SECTION HOME PAGE
 }
 
 #aboutProject p{
-    font-size: 20px;
+    font-size: 25px;
     text-align: justify;
 }
 
@@ -654,15 +655,16 @@ MAIN SECTION HOME PAGE
 
 #indexMap .lead{
     font-size: 20px;
+    color: #fff;
 }
 
 
-#map{
+#indexMap #map{
     height: 500px;
     width: 100%;
 }
 
-#map2{
+#globalEvents #map2{
     height: 600px;
     width: 100%;
 }
@@ -698,6 +700,7 @@ MAIN SECTION HOME PAGE
 #news .article p{
     font-size: 19px;
     text-align: justify;
+    height: 160px;
 }
 
 #news .article .button{
@@ -875,9 +878,13 @@ table.footable td{
     border-top: 1px solid #ccc;
 }
 
+#about #stationList{
+    margin: 50px 0 150px 0;
+}
+
 #about #stationList table{
     width: 80%;
-    margin: 50px auto 150px auto;
+    margin: 0 auto;
 }
 
 #about #stationList table th,

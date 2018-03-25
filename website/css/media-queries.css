@@ -1,3 +1,21 @@
+@media all and (max-width: 1400px) {
+
+    header .carousel-caption h1 {
+        font-size: 50px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    header .carousel-caption p {
+        font-size: 26px;
+    }
+
+    header .carousel-caption p br{
+        display: none;
+    }
+}
+
+
 @media all and (max-width: 1199px) {
 
     #myCarousel .item {
@@ -24,6 +42,52 @@
 
     #fb-widget {
         top: 130px;
+    }
+
+    #aboutProject h3 {
+        font-size: 47px;
+        margin-top: 0px;
+    }
+
+    #aboutProject p {
+        font-size: 20px;
+    }
+
+    a.button, input.button {
+        padding: 10px 20px;
+    }
+
+    #indexMap .mainHeader {
+        font-size: 41px;
+    }
+
+    #news .article h4 {
+        font-size: 25px;
+    }
+
+    #news .article p {
+        font-size: 18px;
+
+    }
+
+    #about #intro h4 {
+        font-size: 30px;
+        padding: 10px 0;
+        font-weight: bold;
+    }
+
+    #about #intro p {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    #about #infoSqueres button.btn-lg{
+        font-size: 25px;
+    }
+
+    #about #stationList table {
+        width: 100%;
+        margin: 0 auto;
     }
 
 
@@ -53,12 +117,12 @@
         height: 72px;
     }
 
-    header .carousel-caption h3 {
-        font-size: 55px;
+    header .carousel-caption h1 {
+        font-size: 45px;
     }
 
     header .carousel-caption p {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     footer .myself p {
@@ -70,6 +134,45 @@
         top: 100px;
     }
 
+    #aboutProject h3 {
+        font-size: 60px;
+    }
+
+    #aboutProject p {
+        font-size: 25px;
+    }
+
+    #indexMap .mainHeader,
+    #indexMap .lead{
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    #indexMap .lead{
+        font-size: 25px;
+    }
+
+    #indexMap a.button{
+        margin-bottom: 50px;
+    }
+
+    #indexMap #map{
+        height: 450px;
+    }
+
+    #globalEvents #map2{
+        height: 450px;
+    }
+
+    #intro .mainHeader{
+        font-size: 42px;
+    }
+
+    #about #intro p {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 22px;
+    }
 
 
 
@@ -96,17 +199,63 @@
         text-align:center;
     }
 
+    header .carousel-caption h1 {
+        font-size: 40px;
+    }
+
+    #indexMap .mainHeader,
+    #indexMap .lead{
+        width: 90%;
+    }
+
+    #aboutProject h3,
+    #aboutProject p,
+    #globalEvents .mainHeader,
+    #globalEvents .lead,
+    #news .mainHeader,
+    #news .lead{
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #news .lead{
+        margin-bottom: 50px ;
+    }
+
+    #news .article{
+        width: 75%;
+        margin: 20px auto;
+    }
+
+    #news .article h4 {
+        font-size: 33px;
+    }
+
+    #news .article p {
+        font-size: 22px;
+    }
+
+    footer .navi ul li {
+        display: inline-block;
+        padding: 20px 8px;
+    }
+
+    #news .article p {
+        height: auto;
+    }
+
+
 
 }
 
 @media all and (max-width: 650px) {
 
-    header .carousel-caption h3 {
-        font-size: 40px;
+    header .carousel-caption h1 {
+        font-size: 35px;
     }
 
     header .carousel-caption p {
-        font-size: 18px;
+        font-size: 21px;
     }
 
 
@@ -114,6 +263,30 @@
         width: 100%;
         font-size: 18px;
         line-height: 22px;
+    }
+
+
+    #indexMap .mainHeader,
+    #indexMap .lead,
+    #aboutProject h3,
+    #aboutProject p,
+    #globalEvents .mainHeader,
+    #globalEvents .lead,
+    #news .mainHeader,
+    #news .lead{
+        width: 95%;
+    }
+
+    #news .article{
+        width: 90%;
+    }
+
+    footer .navi ul li a {
+        font-size: 20px;
+    }
+
+    footer .navi ul li {
+        padding: 20px 7px;
     }
 
 }
@@ -129,11 +302,67 @@
         width: 32%;
     }
 
+    footer .navi ul li {
+        display: block;
+        padding: 5px;
+    }
+
+    .static-top h1 {
+        top: 110px;
+        font-size: 80px;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    #about #infoSqueres button.btn-lg {
+        margin: 5px auto;
+    }
+
 
 }
 
 @media all and (max-width: 460px) {
 
+
+    header .carousel-caption h1 {
+        font-size: 33px;
+        letter-spacing: 1px;
+        margin-top: -50px;
+    }
+
+    #indexMap .mainHeader,
+    #indexMap .lead,
+    #aboutProject h3,
+    #aboutProject p,
+    #globalEvents .mainHeader,
+    #globalEvents .lead,
+    #news .mainHeader,
+    #news .lead{
+        width: 98%;
+    }
+
+    #news .article{
+        width: 95%;
+    }
+
+    #globalEvents .mainHeader{
+        font-size: 40px;
+        padding-top: 0;
+    }
+
+    .static-top h1 {
+        top: 120px;
+        font-size: 60px;
+    }
+
+    #intro .mainHeader {
+        font-size: 35px;
+    }
+
+    #about #intro p {
+        width: 90%;
+    }
 
 }
 
