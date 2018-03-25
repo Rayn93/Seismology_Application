@@ -90,6 +90,20 @@
         margin: 0 auto;
     }
 
+    #blogList #postList article h3 {
+        font-size: 25px;
+        margin-top: 0;
+        height: 50px;
+    }
+
+    #blogList #postList article p.dot {
+        height: 150px;
+    }
+
+    #staticPage article .simpleArticle{
+        width: 70%;
+    }
+
 
 }
 
@@ -174,6 +188,52 @@
         font-size: 22px;
     }
 
+    #blogPost .static-top h1 {
+        font-size: 70px;
+        padding-left: 100px;
+        line-height: 60px;
+    }
+
+    #blogPost .static-top .infoBox {
+        margin-left: 100px;
+    }
+
+    #blogPost article, #staticPage article {
+        padding: 70px 0;
+    }
+
+    #blogPost article .simpleArticle,
+    #staticPage article .simpleArticle {
+        width: 70%;
+    }
+
+    #blogList #postList article h3,
+    #blogList #postList article p.dot{
+        height: auto;
+    }
+
+    #blogList #postList article{
+        height: auto;
+        padding-bottom: 55px !important;
+    }
+
+    #blogList #postList article.imgLeft img,
+    #blogList #postList article.imgRight img{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    #blogList #postList article a.button {
+        position: absolute;
+        bottom: -65px;
+        right: 10px;
+    }
+
+    #staticPage .styled-input {
+        width: 100%;
+    }
 
 
 }
@@ -244,6 +304,25 @@
         height: auto;
     }
 
+    #single-event #event-table .row,
+    #single-station #event-table .row {
+        margin-top: -56px;
+    }
+
+    #blogPost .static-top h1 {
+        font-size: 60px;
+        padding-left: 60px;
+        line-height: 55px;
+    }
+
+    #blogPost .static-top .infoBox {
+        margin-left: 60px;
+    }
+
+    #blogPost article .simpleArticle,
+    #staticPage article .simpleArticle {
+        width: 80%;
+    }
 
 
 }
@@ -289,6 +368,7 @@
         padding: 20px 7px;
     }
 
+
 }
 
 @media all and (max-width: 580px) {
@@ -312,6 +392,11 @@
         font-size: 80px;
     }
 
+    #single-event #event-table .row,
+    #single-station #event-table .row {
+        padding: 30px 2px 50px 2px;
+    }
+
 }
 
 @media all and (max-width: 500px) {
@@ -319,7 +404,25 @@
         margin: 5px auto;
     }
 
+    #single-event #event-table h2,
+    #single-station #event-table h2 {
+        font-size: 40px;
+    }
 
+    #blogPost .static-top h1 {
+        font-size: 50px;
+        padding-left: 25px;
+        line-height: 50px;
+    }
+
+    #blogPost .static-top .infoBox {
+        margin-left: 25px;
+    }
+
+    #blogPost article .simpleArticle,
+    #staticPage article .simpleArticle {
+        width: 90%;
+    }
 }
 
 @media all and (max-width: 460px) {
@@ -329,6 +432,15 @@
         font-size: 33px;
         letter-spacing: 1px;
         margin-top: -50px;
+    }
+
+    header .burger {
+        margin-left: 10px;
+        margin-top: 17px;
+    }
+
+    header .icons-header ul li {
+        margin-right: 22px;
     }
 
     #indexMap .mainHeader,
@@ -362,6 +474,11 @@
 
     #about #intro p {
         width: 90%;
+    }
+
+    #single-event #event-table table tr,
+    #single-station #event-table table tr {
+        font-size: 19px;
     }
 
 }
