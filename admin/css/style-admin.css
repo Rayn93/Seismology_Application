@@ -86,7 +86,6 @@ table th.actions{
  *****************************/
 .filter-search .form-group{
     margin-right: 10px;
-    width: 200px;
 }
 
 .filter-search .form-group.limit{
@@ -95,6 +94,11 @@ table th.actions{
 
 .filter-search .form-group.limit label{
     margin-top: 7px;
+}
+
+.form-group input{
+    width: 200px;
+    display: block !important;
 }
 
 
@@ -168,4 +172,12 @@ body.login {
     height: 200px;
     display: block;
     margin: 0 auto;
+}
+
+
+
+/*My style*/
+
+.mb20{
+    margin-bottom: 20px;
 }
