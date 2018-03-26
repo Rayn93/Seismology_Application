@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Panel Administracyjny Blog SF2.">
+
+        <title>Konto użytkownika</title>
+
+        <link rel="icon" type="image/png" href="/favicon.png">
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/select2.css" rel="stylesheet">
+        <link href="css/style-admin.css" rel="stylesheet">
+
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <script src="js/vendor/select2.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body class="edit-user">
+
+        <!--Nawigacja-->
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Rozwiń menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">USS UŚ</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Kokpit</a></li>
+                    <li><a href="#">Stacje sejsmiczne</a></li>
+                    <li><a href="#">Wstrząsy lokalne</a></li>
+                    <li><a href="#">Trzęsienia ziemi</a></li>
+                    <li><a href="#">Strony</a></li>
+                    <li><a href="#">Aktualności</a></li>
+                    <li><a href="#">Moje konto</a></li>
+                    <li><a href="#">Użytkownicy</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Robert Saternus</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--/Nawigacja-->
+
+		<!-- content container -->
+        <div class="container">
+            <form action="#" method="post" class="form-horizontal" role="form">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Dane podstawowe
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label for="nickname" class="col-lg-2 control-label">Nick:</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="nickname" placeholder="Nick">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-lg-2 control-label">E-mail:</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="email" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-lg-2 control-label">Hasło:</label>
+                                    <div class="col-lg-10">
+                                        <input type="password" class="form-control" id="password" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role" class="col-lg-2 control-label">Uprawnienia:</label>
+                                    <div class="col-lg-10">
+                                        <select name="role" id="role" class="select-block">
+                                            <option value="user">Użytkownik</option>
+                                            <option value="editor">Redaktor</option>
+                                            <option value="admin">Administrator</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- .col-md-8 -->
+
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Akcje
+                                    </div>
+                                    <div class="panel-body">
+                                        <button class="btn btn-success">Zapisz</button>
+                                    </div>
+                                </div>
+                            </div>  <!-- .col-md-12 -->
+
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Avatar
+                                    </div>
+                                    <div class="panel-body">
+                                         <p><img src="img/test-user.png" alt="avatar" width="200" height="200" class="img-thumbnail avatar"></p>
+                                        <!--<p>Brak miniaturki</p>-->
+                                        <input type="file" name="thumbnail">
+                                    </div>
+                                </div>
+                            </div> <!-- .col-md-12 -->
+
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Dostepność
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""> Konto wygasło</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""> Konto zablokowane</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""> Dane uwierzytelniajace wygasły</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value=""> Konto aktywowane</label>
+                                        </div>
+                                    </div> <!-- .panel-body -->
+                                </div> <!-- .panel -->
+                            </div> <!-- .col-md-12 -->
+                        </div> <!-- .row -->
+                    </div> <!-- .col-md-4 -->
+
+                </div> <!-- .row -->
+            </form>
+        </div> <!-- .container -->
+		<!-- content container -->
+    </body>
+</html>
