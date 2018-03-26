@@ -96,7 +96,7 @@ table th.actions{
     margin-top: 7px;
 }
 
-.form-group input{
+#collapseSearchForm .form-group input{
     width: 200px;
     display: block !important;
 }
@@ -180,4 +180,8 @@ body.login {
 
 .mb20{
     margin-bottom: 20px;
+}
+
+#fileList{
+    margin-top: 20px;
 }
