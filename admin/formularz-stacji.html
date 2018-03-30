@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Panel Administracyjny Blog SF2.">
+
+        <title>Formularz stacji</title>
+
+        <link rel="icon" type="image/png" href="/favicon.png">
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/select2.css" rel="stylesheet">
+        <link href="css/style-admin.css" rel="stylesheet">
+
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <script src="js/vendor/select2.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body class="object-edit">
+
+        <!--Nawigacja-->
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Rozwiń menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">USS UŚ</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Kokpit</a></li>
+                    <li><a href="#">Stacje sejsmiczne</a></li>
+                    <li><a href="#">Wstrząsy lokalne</a></li>
+                    <li><a href="#">Trzęsienia ziemi</a></li>
+                    <li><a href="#">Strony</a></li>
+                    <li><a href="#">Aktualności</a></li>
+                    <li><a href="#">Moje konto</a></li>
+                    <li><a href="#">Użytkownicy</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Robert Saternus</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--/Nawigacja-->
+
+		<!-- content container -->
+        <div class="container">
+            <form action="#" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Dodawanie nowej stacji / Edycja stacji Mysłowice
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <label for="stationName" class="col-lg-2 control-label">Nazwa</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="stationName" placeholder="Nazwa stacji">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="shortName" class="col-lg-2 control-label">Skrót</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="shortName" placeholder="Skrót nazwy stacji">
+                                    </div>
+                                </div>
+
+                                <div class="form-group has-error">
+                                    <label for="city" class="col-lg-2 control-label">Nr sejsmo.</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="city" placeholder="Numer sejsmometru">
+                                        <p class="help-block">Uzupełnij to pole.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group has-error">
+                                    <label for="longitude" class="col-lg-2 control-label">Dlugość</label>
+                                    <div class="col-lg-10">
+                                        <input type="number" class="form-control" id="longitude" placeholder="Dlugość geograficzna" step=".0001">
+                                        <p class="help-block">Uzupełnij to pole.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="latitude" class="col-lg-2 control-label">Szerokość</label>
+                                    <div class="col-lg-10">
+                                        <input type="number" class="form-control" id="latitude" placeholder="Szerokość Geograficzna" step=".0001">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="height" class="col-lg-2 control-label">Wysokość [m]</label>
+                                    <div class="col-lg-10">
+                                        <input type="number" class="form-control" id="height" placeholder="Wysokość m n.p.m.">
+                                    </div>
+                                </div>
+
+                                <div class="form-group has-error">
+                                    <label for="xsucha" class="col-lg-2 control-label">X Sucha Góra</label>
+                                    <div class="col-lg-10">
+                                        <input type="number" class="form-control" id="xsucha" placeholder="X Sucha Góra">
+                                        <p class="help-block">Uzupełnij to pole.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ysucha" class="col-lg-2 control-label">Y Sucha Góra</label>
+                                    <div class="col-lg-10">
+                                        <input type="number" class="form-control" id="ysucha" placeholder="Y Sucha Góra" step=".0001">
+                                    </div>
+                                </div>
+
+                                <div class="form-group  has-error">
+                                    <label for="content" class="col-lg-2 control-label">Uwagi</label>
+                                    <div class="col-lg-10">
+                                        <textarea class="form-control summernote" name="content" id="content" placeholder="Uwagi i dodatkowe informacje"></textarea>
+                                        <p class="help-block">Uzupełnij to pole.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- .col-md-8 -->
+
+
+
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Akcje
+                                    </div>
+                                    <div class="panel-body">
+                                        <button class="btn btn-success">Zapisz</button>
+                                    </div>
+                                </div>
+                            </div> <!-- .col-md-12 -->
+
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Załączniki
+                                    </div>
+                                    <div class="panel-body">
+                                        <!-- <p><img src="..." alt="..." class="img-thumbnail"></p> -->
+                                        <!--<p>Brak pliku</p>-->
+                                        <input  type="file" name="file[]" id="filesToUpload" multiple="" onchange="makeFileList();">
+                                        <!--<p id=""></p>-->
+                                        <ul id="fileList">
+                                            <li>Brak plików</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- .col-md-12 -->
+
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Właściwości
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="publishDate" class="col-lg-5 required">Data publikacji</label>
+                                            <div class="col-lg-7">
+                                                <div>
+                                                    <input type="date" id="publishDate" name="publishDate" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  <!-- .col-md-4 -->
+
+
+
+                </div> <!-- .row -->
+            </form>
+        </div> <!-- .container -->
+		<!-- /content container -->
+    </body>
+
+</html>
